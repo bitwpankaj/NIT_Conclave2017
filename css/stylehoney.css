@@ -1,0 +1,116 @@
+
+
+.honeycomb {
+  margin: 40px auto;
+  text-align: center;
+  box-sizing: border-box;
+  perspective: 1000px;
+  position: relative;
+  height: 420px;
+  width: 509.96px;
+}
+
+.hexagon {
+  position: relative;
+  float: left;
+  margin: 40px 0;
+  background-color: #08c;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s, color 0.3s;
+  color: #fff;
+}
+.hexagon, .hexagon:before, .hexagon:after {
+  height: 80px;
+  width: 138.56px;
+  box-sizing: border-box;
+}
+.hexagon:before, .hexagon:after {
+  background-color: inherit;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hexagon:before {
+  transform: rotate(-60deg);
+}
+.hexagon:after {
+  transform: rotate(60deg);
+}
+.hexagon .front, .hexagon .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  height: 100px;
+  width: 100px;
+  font-size: 16px;
+  line-height: 1.4;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.hexagon i {
+  font-size: 60px;
+}
+.hexagon span {
+  display: block;
+}
+.hexagon .front {
+  z-index: 2;
+  transform: translate3d(-50%, -50%, 0) rotateY(0deg);
+}
+.hexagon .back {
+  transform: translate3d(-50%, -50%, 0) rotateY(180deg);
+}
+.hexagon .hexagontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.hexahover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hexahover:focus {
+  outline: none;
+}
+.hexahover:hover .hexagon, .hexahover:focus .hexagon {
+  transform: rotateY(180deg);
+  background: #0c8;
+}
+.hexahover:nth-child(2) {
+  left: 148.56px;
+}
+.hexahover:nth-child(3) {
+  left: 297.12px;
+}
+.hexahover:nth-child(4) {
+  left: 74.28px;
+  top: 130px;
+}
+.hexahover:nth-child(5) {
+  left: 222.84px;
+  top: 130px;
+}
+.hexahover:nth-child(6) {
+  left: 371.4px;
+  top: 130px;
+}
+.hexahover:nth-child(7) {
+  left: 0;
+  top: 260px;
+}
+.hexahover:nth-child(8) {
+  left: 148.56px;
+  top: 260px;
+}
+.hexahover:nth-child(9) {
+  left: 297.12px;
+  top: 260px;
+}
